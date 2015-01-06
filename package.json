@@ -20,5 +20,8 @@
   "repository": {
     "type": "git",
     "url": "git@github.com:Turfjs/turf-area.git"
+  },
+  "devDependencies": {
+    "tape": "^3.0.3"
   }
 }
