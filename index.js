@@ -5,7 +5,7 @@ var geometryArea = require('geojson-area').geometry;
  * in square meters.
  * @module turf/area
  * @param {GeoJSON} input
- * @return {number} area in square meters
+ * @return {Number} area in square meters
  * @example
  * var polygons = turf.featurecollection([
  *   turf.polygon([[[0,0],[10,0],[10,10],[0,10],[0,0]]]),
