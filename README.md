@@ -3,8 +3,7 @@ turf-area
 
 [![Build Status](https://travis-ci.org/Turfjs/turf-area.svg)](https://travis-ci.org/Turfjs/turf-area)
 
-Calculates the total geographical area in meters squared of a GeoJSON Polygon,
-MultiPolygon, or FeatureCollection.
+Calculates the total geographical area in meters squared of any GeoJSON object.
 
 ### Install
 

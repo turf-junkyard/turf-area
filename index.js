@@ -1,10 +1,11 @@
 var geometryArea = require('geojson-area').geometry;
 
 /**
- * Given any kind of GeoJSON feature, return the area of that feature
+ * Given any kind of GeoJSON feature, return the area of that feature,
+ * in square meters.
  * @module turf/area
  * @param {GeoJSON} input
- * @return {number} area in meters squared
+ * @return {number} area in square meters
  * @example
  * var polygons = turf.featurecollection([
  *   turf.polygon([[[0,0],[10,0],[10,10],[0,10],[0,0]]]),
@@ -16,11 +17,12 @@ module.exports = function(_) {
     if (_.type === 'FeatureCollection') {
         for (var i = 0, sum = 0; i < _.features.length; i++) {
             if (_.features[i].geometry) {
-                var added = geometryArea(_.features[i].geometry);
-                sum += added || 0;
+                sum += geometryArea(_.features[i].geometry);
             }
         }
         return sum;
+    } else if (_.type === 'Feature') {
+        return geometryArea(_.geometry);
     } else {
         return geometryArea(_);
     }
