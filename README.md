@@ -1,35 +1,43 @@
-turf-area
-==========
+# turf-area
 
-[![Build Status](https://travis-ci.org/Turfjs/turf-area.svg)](https://travis-ci.org/Turfjs/turf-area)
+[![build status](https://secure.travis-ci.org/Turfjs/turf-area.png)](http://travis-ci.org/Turfjs/turf-area)
 
-Calculates the total geographical area in meters squared of any GeoJSON object.
+calculate the area of a polygon or multipolygon feature
 
-### Install
 
-```sh
-npm install turf-area
-```
+### `turf.area(input)`
+
+Given any kind of GeoJSON feature, return the area of that feature,
+in square meters.
 
 ### Parameters
 
-|name|description|
-|---|---|
-|input|FeatureCollection, Polygon, or MultiPolygon|
+| parameter | type    | description |
+| --------- | ------- | ----------- |
+| `input`   | GeoJSON |             |
 
-### Usage
-
-```js
-area(input)
-```
 
 ### Example
 
 ```js
-var getArea = require('turf-area')
-var polygon = require('turf-polygon')
-var poly1 = polygon([[[0,0],[10,0],[10,10], [0,10]]])
-var area = getArea(poly1)
-
-console.log(area)
+var polygons = turf.featurecollection([
+  turf.polygon([[[0,0],[10,0],[10,10],[0,10],[0,0]]]),
+  turf.polygon([[[10,0],[20,10],[20,20], [20,0]]])]);
+var area = turf.area(polygons);
+//=area
 ```
+
+## Installation
+
+Requires [nodejs](http://nodejs.org/).
+
+```sh
+$ npm install turf-area
+```
+
+## Tests
+
+```sh
+$ npm test
+```
+
