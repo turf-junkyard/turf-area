@@ -1,7 +1,7 @@
 var geometryArea = require('geojson-area').geometry;
 
 /**
- * Takes a {@link GeoJSON} feature or {@link FeatureCollection} of any type and returns Given any kind of GeoJSON feature, return the area of that feature,
+ * Takes a {@link GeoJSON} feature or {@link FeatureCollection} of any type and returns the area of that feature
  * in square meters.
  *
  * @module turf/area
