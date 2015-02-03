@@ -8,22 +8,38 @@ var geometryArea = require('geojson-area').geometry;
  * @param {GeoJSON} input a {@link Feature} or {@link FeatureCollection} of any type
  * @return {Number} area in square meters
  * @example
- * var polygons = turf.featurecollection([
- *   turf.polygon([[
- *     [-67.031021, 10.458102],
- *     [-67.031021, 10.53372],
- *     [-66.929397, 10.53372],
- *     [-66.929397, 10.458102],
- *     [-67.031021, 10.458102]
- *   ]]),
- *   turf.polygon([[
- *     [-66.919784, 10.397325],
- *     [-66.919784, 10.513467],
- *     [-66.805114, 10.513467],
- *     [-66.805114, 10.397325],
- *     [-66.919784, 10.397325]
- *   ]])
- * ]);
+ * var polygons = {
+ *   "type": "FeatureCollection",
+ *   "features": [
+ *     {
+ *       "type": "Feature",
+ *       "properties": {},
+ *       "geometry": {
+ *         "type": "Polygon",
+ *         "coordinates": [[
+ *           [-67.031021, 10.458102],
+ *           [-67.031021, 10.53372],
+ *           [-66.929397, 10.53372],
+ *           [-66.929397, 10.458102],
+ *           [-67.031021, 10.458102]
+ *         ]]
+ *       }
+ *     }, {
+ *       "type": "Feature",
+ *       "properties": {},
+ *       "geometry": {
+ *         "type": "Polygon",
+ *         "coordinates": [[
+ *           [-66.919784, 10.397325],
+ *           [-66.919784, 10.513467],
+ *           [-66.805114, 10.513467],
+ *           [-66.805114, 10.397325],
+ *           [-66.919784, 10.397325]
+ *         ]]
+ *       }
+ *     }
+ *   ]
+ * };
  *
  * var area = turf.area(polygons);
  *
