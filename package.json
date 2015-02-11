@@ -23,6 +23,7 @@
     "url": "git@github.com:Turfjs/turf-area.git"
   },
   "devDependencies": {
+    "geojson-fixtures": "^0.6.0",
     "tape": "^3.0.3",
     "dox": "^0.6.1",
     "doxme": "^1.4.2"
