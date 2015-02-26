@@ -6,7 +6,7 @@ var geometryArea = require('geojson-area').geometry;
  *
  * @module turf/area
  * @category measurement
- * @param {(Feature<(Point|LineString|Polygon)>|FeatureCollection<(Point|LineString|Polygon)>)} input input features
+ * @param {(Feature|FeatureCollection)} input input features
  * @return {Number} area in square meters
  * @example
  * var polygons = {
