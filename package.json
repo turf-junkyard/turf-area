@@ -16,7 +16,7 @@
   "author": "Tom MacWright",
   "license": "ISC",
   "dependencies": {
-    "geojson-area": "^0.2.0"
+    "geojson-area": "^0.2.1"
   },
   "repository": {
     "type": "git",
